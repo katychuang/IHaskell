@@ -71,8 +71,11 @@ library
                        haskell-src-exts     >=1.16,
                        http-client          >= 0.4,
                        http-client-tls      >= 0.2,
+                       lens,
                        mtl                  >=2.1,
+                       optparse-generic, 
                        parsec               -any,
+                       plots,
                        process              >=1.1,
                        random               >=1.0,
                        shelly               >=1.5,
@@ -145,7 +148,10 @@ executable ihaskell
                        strict               >=0.3,
                        unix                 >= 2.6,
                        directory            -any,
-                       ipython-kernel       >=0.7
+                       ipython-kernel       >=0.7,
+                       plots,
+                       lens,
+                       optparse-generic
 
   if flag(binPkgDb)
     build-depends:       bin-package-db
@@ -172,6 +178,7 @@ Test-Suite hspec
         ghc-paths,
         transformers,
         directory,
+        optparse-generic,
         text,
         shelly,
         setenv

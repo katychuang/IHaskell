@@ -6,10 +6,10 @@ function make_parser {
     SRCNAME=$2
 
     # Preprocess the GHC parser we're using to CPP subs.
-    cpphs --linepragma --text ${SRCNAME}.y.pp -OParser.y
+    /Users/kat/.local/bin/cpphs --linepragma --text ${SRCNAME}.y.pp -OParser.y
 
     # Compile the parser and remove intermediate file.
-    happy Parser.y
+    /Users/kat/.local/bin/happy Parser.y
     rm Parser.y
 
     # Move output Haskell to source directory.

@@ -1,0 +1,3 @@
+[submodule "deps/plots"]
+	path = deps/plots
+	url = https://github.com/cchalmers/plots.git

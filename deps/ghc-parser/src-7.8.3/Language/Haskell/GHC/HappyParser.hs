@@ -26763,9 +26763,9 @@ happyReduction_410 ((HappyAbsSyn157  happy_var_6) `HappyStk`
 	(HappyTerminal happy_var_1) `HappyStk`
 	happyRest)
 	 = HappyAbsSyn157
-		 (sL (comb2 happy_var_1 happy_var_6) $ HsLam (mkMatchGroup [sL (comb2 happy_var_1 happy_var_6) $ Match (happy_var_2:happy_var_3) happy_var_4
+		 (sL (comb2 happy_var_1 happy_var_6) $ HsLam (mkMatchGroup FromSource [sL (comb2 happy_var_1 happy_var_6) $ Match (happy_var_2:happy_var_3) happy_var_4
                                                                 (unguardedGRHSs happy_var_6)
-                                                            ])
+                                                              ])
 	) `HappyStk` happyRest
 
 happyReduce_411 = happyReduce 4 159 happyReduction_411
@@ -26783,7 +26783,7 @@ happyReduction_412 (HappyAbsSyn185  happy_var_3)
 	_
 	(HappyTerminal happy_var_1)
 	 =  HappyAbsSyn157
-		 (sL (comb2 happy_var_1 happy_var_3) $ HsLamCase placeHolderType (mkMatchGroup (unLoc happy_var_3))
+		 (sL (comb2 happy_var_1 happy_var_3) $ HsLamCase placeHolderType (mkMatchGroup FromSource (unLoc happy_var_3))
 	)
 happyReduction_412 _ _ _  = notHappyAtAll 
 
@@ -26816,7 +26816,7 @@ happyReduction_415 ((HappyAbsSyn185  happy_var_4) `HappyStk`
 	(HappyTerminal happy_var_1) `HappyStk`
 	happyRest)
 	 = HappyAbsSyn157
-		 (sL (comb2 happy_var_1 happy_var_4) $ HsCase happy_var_2 (mkMatchGroup (unLoc happy_var_4))
+		 (sL (comb2 happy_var_1 happy_var_4) $ HsCase happy_var_2 (mkMatchGroup FromSource (unLoc happy_var_4))
 	) `HappyStk` happyRest
 
 happyReduce_416 = happySpecReduce_2  159 happyReduction_416
@@ -29391,11 +29391,9 @@ hintExplicitForall span = do
 {-# LINE 1 "templates/GenericTemplate.hs" #-}
 {-# LINE 1 "templates/GenericTemplate.hs" #-}
 {-# LINE 1 "<built-in>" #-}
-{-# LINE 1 "<command-line>" #-}
-{-# LINE 8 "<command-line>" #-}
-# 1 "/usr/include/stdc-predef.h" 1 3 4
+{-# LINE 16 "<built-in>" #-}
+{-# LINE 1 "/Users/kat/.stack/programs/x86_64-osx/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h" #-}
 
-# 17 "/usr/include/stdc-predef.h" 3 4
 
 
 
@@ -29413,6 +29411,8 @@ hintExplicitForall span = do
 
 
 
+{-# LINE 17 "<built-in>" #-}
+{-# LINE 1 "/var/folders/n4/vr4dlr2j4q9ddbnlnnljbmjm0000gp/T/ghc17171_0/ghc_2.h" #-}
 
 
 
@@ -29438,8 +29438,6 @@ hintExplicitForall span = do
 
 
 
-{-# LINE 8 "<command-line>" #-}
-{-# LINE 1 "/home/andrei/.stack/programs/x86_64-linux/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h" #-}
 
 
 
@@ -29457,8 +29455,6 @@ hintExplicitForall span = do
 
 
 
-{-# LINE 8 "<command-line>" #-}
-{-# LINE 1 "/tmp/ghc2743_0/ghc_2.h" #-}
 
 
 
@@ -29568,52 +29564,13 @@ hintExplicitForall span = do
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{-# LINE 8 "<command-line>" #-}
+{-# LINE 18 "<built-in>" #-}
 {-# LINE 1 "templates/GenericTemplate.hs" #-}
 -- Id: GenericTemplate.hs,v 1.26 2005/01/14 14:47:22 simonmar Exp 
 
+
 {-# LINE 13 "templates/GenericTemplate.hs" #-}
+
 
 {-# LINE 46 "templates/GenericTemplate.hs" #-}
 
@@ -29624,11 +29581,20 @@ hintExplicitForall span = do
 
 
 
+
 {-# LINE 67 "templates/GenericTemplate.hs" #-}
+
 
 {-# LINE 77 "templates/GenericTemplate.hs" #-}
 
-{-# LINE 86 "templates/GenericTemplate.hs" #-}
+
+
+
+
+
+
+
+
 
 infixr 9 `HappyStk`
 data HappyStk a = HappyStk a (HappyStk a)
@@ -29651,6 +29617,7 @@ happyAccept j tk st sts (HappyStk ans _) =
 
 -----------------------------------------------------------------------------
 -- Arrays only: do the next action
+
 
 {-# LINE 155 "templates/GenericTemplate.hs" #-}
 
@@ -29746,7 +29713,14 @@ happyDropStk n (x `HappyStk` xs) = happyDropStk (n - ((1)::Int)) xs
 -----------------------------------------------------------------------------
 -- Moving to a new state after a reduction
 
-{-# LINE 256 "templates/GenericTemplate.hs" #-}
+
+
+
+
+
+
+
+
 happyGoto action j tk st = action j j tk (HappyState action)
 
 
@@ -29805,7 +29779,14 @@ happyDontSeq a b = b
 -- of deciding to inline happyGoto everywhere, which increases the size of
 -- the generated parser quite a bit.
 
-{-# LINE 322 "templates/GenericTemplate.hs" #-}
+
+
+
+
+
+
+
+
 {-# NOINLINE happyShift #-}
 {-# NOINLINE happySpecReduce_0 #-}
 {-# NOINLINE happySpecReduce_1 #-}
@@ -29817,3 +29798,4 @@ happyDontSeq a b = b
 {-# NOINLINE happyFail #-}
 
 -- end of Happy Template.
+

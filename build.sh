@@ -35,7 +35,7 @@ INSTALLS=""
 # Compile dependencies.
 if [ $# -gt 0 ]; then
   if [ $1 = "all" ] || [ $1 = "ihaskell" ]; then
-    INSTALLS="$INSTALLS ghc-parser ipython-kernel"
+    INSTALLS="$INSTALLS deps/ghc-parser deps/ipython-kernel"
   fi
 fi
 

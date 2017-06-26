@@ -1,25 +1,16 @@
+This fork is my version of iHaskell with Plots for GHC 8.0 to generate charts. An example of a notebook is [here](https://github.com/katychuang/jupyter-notebooks/blob/master/facebook_posting_activity_haskell.ipynb).
+
+Plots depends on Lens and Diagrams, so those libraries are supported also.
+
+---
+
+Credits:
+
 ![jupyter](https://i.imgur.com/S16l2Hw.png) ![IHaskell](https://i.imgur.com/qhXXFbA.png) [![Build Status](https://travis-ci.org/gibiansky/IHaskell.svg?branch=master)](https://travis-ci.org/gibiansky/IHaskell)
 
-# IHaskell
 
-> You can now try IHaskell directly in your browser at [try.jupyter.org](https://try.jupyter.org).
->
-> Alternatively, watch a [talk and demo](http://begriffs.com/posts/2016-01-20-ihaskell-notebook.html) showing off IHaskell features.
+**IHaskell** is a kernel for the [Jupyter project](http://ipython.org), which allows you to use Haskell inside Jupyter frontends (including the console and notebook).
 
-IHaskell is a kernel for the [Jupyter project](http://ipython.org), which allows you to use Haskell inside Jupyter frontends (including the console and notebook).
-
-For a tour of some IHaskell features, check out the [demo Notebook](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb). More example notebooks are available on the [wiki](https://github.com/gibiansky/IHaskell/wiki).
-The [wiki](https://github.com/gibiansky/IHaskell/wiki) also has more extensive documentation of IHaskell features.
-
-![IPython Console](https://raw.github.com/gibiansky/IHaskell/master/images/ihaskell-console.png)
-![IPython Notebook](https://raw.github.com/gibiansky/IHaskell/master/images/ihaskell-notebook.png)
-
-### Interactive In-Browser Notebook
-
-
-**Note:** IHaskell does not support Windows. To use on Windows, install
-Virtualbox, install Ubuntu or another Linux distribution, and proceed with the
-install instructions.
 
 # Installation
 
